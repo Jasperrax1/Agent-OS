@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muse Vision V2 · 电脑端额度演示</title>
+  <style>
+    :root { font-family: system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #edf6f2; color: #19372f; }
+    main { width: min(100%, 68rem); margin: auto; padding: clamp(1rem, 5vw, 4rem); }
+    header { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem; }
+    h1 { margin: .35rem 0 .6rem; font-size: clamp(2rem, 6vw, 4rem); }
+    p { margin: 0 0 .5rem; }
+    .quota { margin-top: 1.5rem; padding: clamp(1rem, 4vw, 2rem); border-radius: 1rem; background: #d8efe6; }
+    .remaining { font-size: clamp(2.4rem, 9vw, 4.5rem); font-weight: 650; }
+    progress { width: min(100%, 30rem); accent-color: #236e58; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p>MUSE VISION V2 · 电脑端演示</p>
+        <h1>AI 应用 · 模型额度</h1>
+        <p>查看模型用量与剩余额度。</p>
+      </div>
+    </header>
+    <section class="quota" aria-label="模拟额度详情">
+      <p>剩余额度</p>
+      <p class="remaining">680</p>
+      <p><label for="usage">已用 320 / 1,000</label></p>
+      <progress id="usage" value="320" max="1000">32%</progress>
+      <p>演示数据</p>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muse · 视觉动效预览</title>
+  <link rel="stylesheet" href="../runtime/listening-ui.css">
+  <link rel="stylesheet" href="preview.css">
+  <script src="../runtime/listening-ui.js" defer></script>
+  <script src="preview.js" defer></script>
+</head>
+<body>
+  <main class="preview">
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">MUSE <span>／</span> VISION</p>
+        <h1>视觉动效预览</h1>
+      </div>
+      <p class="local-label"><span aria-hidden="true"></span>本地演示</p>
+    </header>
+
+    <section class="stage" aria-label="Muse 横屏视觉预览">
+      <div class="device">
+        <div class="viewfinder">
+          <div id="scene" class="scene" aria-hidden="true">
+            <div class="sample-scene">
+              <p>MUSE VISION V2 · 电脑端演示</p>
+              <p class="sample-title">视频播放器</p>
+              <p>预览片段与播放进度。</p>
+              <div class="sample-cover"><span>晚霞片段 · 1:12</span></div>
+            </div>
+          </div>
+          <div id="motion" class="motion"></div>
+        </div>
+        <div class="ring ring-upper" aria-hidden="true"></div>
+        <div class="ring ring-lower" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="预览控制">
+      <div class="transport">
+        <div class="transport-actions">
+          <button type="button" class="play" id="play">播放完整流程</button>
+          <button type="button" id="reset">重置</button>
+        </div>
+        <div class="transport-options">
+          <label for="speed">速度</label>
+          <select id="speed">
+            <option value="0.5">0.5×</option>
+            <option value="1" selected>1×</option>
+            <option value="1.5">1.5×</option>
+          </select>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <progress id="timeline" value="0" max="10.01" aria-label="演示进度"></progress>
+        <output id="elapsed" for="timeline">0.0 / 10.0 秒</output>
+      </div>
+      <div class="phase-grid" role="group" aria-label="跳到指定阶段">
+        <button type="button" class="phase-button" data-phase="ready" aria-pressed="true"><span>01</span>待机</button>
+        <button type="button" class="phase-button" data-phase="entering" aria-pressed="false"><span>02</span>入场</button>
+        <button type="button" class="phase-button" data-phase="listening" aria-pressed="false"><span>03</span>聆听</button>
+        <button type="button" class="phase-button" data-phase="checking" aria-pressed="false"><span>04</span>校验</button>
+        <button type="button" class="phase-button" data-phase="generating" aria-pressed="false"><span>05</span>生成</button>
+        <button type="button" class="phase-button" data-phase="complete" aria-pressed="false"><span>06</span>完成</button>
+      </div>
+      <p id="phase-status" class="phase-status" role="status">待机 · 播放完整流程，或选择一个阶段查看。</p>
+      <div class="extras">
+        <div class="volume">
+          <label for="level">模拟音量</label>
+          <input type="range" id="level" min="0" max="100" value="42" aria-describedby="volume-help">
+          <span id="volume-help" class="visually-hidden">用于单独预览聆听阶段。</span>
+        </div>
+        <div class="background-actions">
+          <label class="file-label">换本地画面<input type="file" id="media" accept="image/*,video/*"></label>
+          <button type="button" class="plain-button" id="default-media" hidden>恢复默认</button>
+        </div>
+      </div>
+    </section>
+    <footer><span>854 × 384 · 横屏参考画幅</span><span>模拟音量和转写 · 麦克风关闭</span></footer>
+  </main>
+</body>
+</html>

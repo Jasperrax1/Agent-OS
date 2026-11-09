@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Muse Vision V2</string>
+    <style name="Theme.Muse" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#0A1018</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

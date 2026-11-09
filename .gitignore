@@ -1,0 +1,12 @@
+.gradle/
+.kotlin/
+**/build/
+.idea/
+*.iml
+local.properties
+app/google-services.json
+.DS_Store
+
+/tencent-asr.local.properties
+
+/doubao-live.local.properties

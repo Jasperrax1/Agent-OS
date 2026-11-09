@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muse Vision V2 · 电脑端视频演示</title>
+  <style>
+    :root { font-family: system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f3f2ff; color: #1c2240; }
+    main { width: min(100%, 68rem); margin: auto; padding: clamp(1rem, 5vw, 4rem); }
+    header { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem; }
+    h1 { margin: .35rem 0 .6rem; font-size: clamp(2rem, 6vw, 4rem); }
+    p { margin: 0 0 .5rem; }
+    .cover {
+      display: grid; place-items: center; min-height: 12rem; aspect-ratio: 16 / 7;
+      margin-top: 1.5rem; border-radius: 1rem;
+      background: radial-gradient(circle at 62% 38%, #fed1a9 0 10%, transparent 11%),
+        linear-gradient(156deg, transparent 52%, #475287 53% 65%, #282d50 66%),
+        linear-gradient(24deg, #343d69, #a78dbb);
+    }
+    .cover span { padding: .65rem 1rem; border-radius: .5rem; background: #15192a; color: white; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p>MUSE VISION V2 · 电脑端演示</p>
+        <h1>视频播放器</h1>
+        <p>预览片段与播放进度。</p>
+      </div>
+    </header>
+    <div class="cover"><span>晚霞片段 · 1:12</span></div>
+  </main>
+</body>
+</html>
